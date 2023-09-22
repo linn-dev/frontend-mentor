@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --bg-col: hsl(216, 12%, 8%);
+    --white: hsl(0, 0%, 100%);
+    --pri-col: hsl(213, 19%, 18%);
+    --sec-col: hsl(216, 12%, 54%);
+    --tri-col: hsl(217, 12%, 63%);
+
+    --pri-font: 'Overpass', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--pri-font);
+    font-size: 15px;
+    font-weight: 400;
+
+    background-color: var(--bg-col);
+    color: var(--sec-col);
+
+    height: 100vh;
+    margin: 0 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.rating__card {
+    padding: 1rem;
+    max-width: 350px;
+    background-color: var(--pri-col);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.rating__card-star {
+    width: 35px;
+    height: 35px;
+    background-color: hsl(213, 18%, 20%);
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+}
+
+.rating__card-title {
+    margin: 1rem 0 0.5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.rating__card-info {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+
+.rated-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.rated-btns button {
+    width: 40px;
+    height: 40px;
+    background-color: hsl(213, 18%, 20%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: all .3s ease-out;
+}
+
+.rated-btns button:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+}
+
+.rated-btns button:focus {
+    background-color: var(--sec-col);
+}
+
+.rating__card .submitbtn {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    margin-top: 1.2rem;
+    width: 100%;
+    height: 40px;
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 15px;
+
+    transition: all .2s ease-in;
+    
+}
+
+.rating__card .submitbtn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+}
+
+.rating__card .submitbtn:active{
+    transform: scale(0.99);
+}
+
+.rating__card.thank {
+    text-align: center;
+}
+
+.rating__card-reply {
+    width: 200px;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: hsl(213, 18%, 20%);
+    color:hsl(25, 97%, 53%);
+
+    border-radius: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution { 
+    bottom: 0;
+    position: absolute;
+    font-size: 16px; 
+    text-align: center;
+    color:hsl(25, 97%, 53%);
+}
+
+.attribution a { 
+    text-decoration: none;
+    color: var(--white);
+}
